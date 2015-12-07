@@ -1,0 +1,11 @@
+    <div class="panel panel-default followBox" ng-show="$root.currentUser">
+      <div class="panel-body">
+        <!-- Input box for user to follow -->
+
+        <!-- List of people to follow -->
+        <h5>Who to follow:</h5>
+        <div class="recommend-users">
+            <button ng-repeat="user in users"  type="button" class="btn btn-default" id="followRec" ng-click="followUser(user._id)">Follow @{{user.username}}</button>
+        </div>
+      </div>
+    </div>

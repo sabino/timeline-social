@@ -1,0 +1,26 @@
+<section id="cd-timeline" class="cd-container">
+  <div ng-repeat="post in posts" class="cd-timeline-block">
+    <div class="cd-timeline-img cd-picture">
+      <img src="https://robohash.org/{{post.username}}?set=set1&size=150x150" alt="Picture">
+    </div> <!-- cd-timeline-img -->
+
+    <div class="cd-timeline-content" ng-class="{'private': post.private}">
+      <h2>{{post.username}}</h2>
+      <p>{{post.text}}</p>
+      <span class="cd-date">{{post.createdAt | date:"dd/MM/yyyy 'at' h:mma"}}</span>
+
+      <button class="delete pull-right" ng-click="deletePost(post)" ng-show="post.owner === $root.currentUser._id">&times;</button>
+
+      <button class="toggle-private pull-right"
+      ng-if="post.owner === $root.currentUser._id"
+      ng-click="setPrivate(post)">
+      {{post.private == true ? "Private" : "Public"}}
+    </button>
+
+  </div> <!-- cd-timeline-content -->
+</div> <!-- cd-timeline-block -->
+</section> <!-- cd-timeline -->
+
+
+
+

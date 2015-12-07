@@ -1,0 +1,11 @@
+   <div class="row">
+      <div class="well well-sm well-social-post" ng-show="$root.currentUser">
+        <form class="new-post"
+        ng-submit="addPost(newPost); newPost='';">
+        <textarea ng-model="newPost" class="form-control" placeholder="What's in your mind?"></textarea>
+        <ul class='list-inline post-actions'>
+          <li><button type="submit" class='btn btn-primary btn-xs'>Post</button></li>
+        </ul>
+      </form>
+    </div>
+  </div>

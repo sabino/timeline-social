@@ -1,0 +1,23 @@
+<head>
+  <title>Social Timeline</title>
+</head>
+
+<body ng-controller="TimelineCtrl">
+
+  <ng-include src="'client/templates/navbar.ng.html'"></ng-include>
+
+  <div class="container">
+    <header>
+
+      <ng-include src="'client/templates/postBox.ng.html'"></ng-include>
+
+      <ng-include src="'client/templates/users.ng.html'"></ng-include>
+
+    </header>
+
+      <ng-include ng-hide="$root.currentUser" src="'client/templates/welcome.ng.html'"></ng-include>
+
+    <ng-include src="'client/templates/timeline.ng.html'"></ng-include>
+  </div>
+
+</body>
